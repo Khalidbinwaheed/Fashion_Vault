@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #0F0F0F;
+  --color-primary-light: #1B1B1B;
+  --color-accent: #D4AF37;
+  --color-accent-light: #FCE181;
+  --color-ivory: #F5F3EF;
+  
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+:root {
+  --background: #0F0F0F;
+  --foreground: #F5F3EF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Useful utility for luxury gradients */
+.bg-luxury-gradient {
+  background: linear-gradient(135deg, #0F0F0F 0%, #1B1B1B 50%, #D4AF37 100%);
+}
+.text-luxury-gradient {
+  background: linear-gradient(to right, #D4AF37, #FCE181);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

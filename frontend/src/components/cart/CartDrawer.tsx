@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Trash2, ShoppingBag, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function CartDrawer() {
   const { isCartOpen, setIsCartOpen, items, updateQuantity, removeFromCart, cartTotal } = useCart();
@@ -63,7 +64,7 @@ export default function CartDrawer() {
                   <div key={item.id} className="flex gap-4 border border-white/5 p-3 bg-primary-light/30">
                     <div className="w-20 h-24 bg-primary-light relative flex-shrink-0">
                        {item.imageUrl ? (
-                         <Image src={item.imageUrl} alt={item.name} fill className="object-cover" />
+                         <Image src={getAssetPath(item.imageUrl)} alt={item.name} fill className="object-cover" />
                        ) : (
                          <div className="w-full h-full flex items-center justify-center border border-white/5">
                             <span className="text-[10px] text-ivory/30 uppercase">Img</span>

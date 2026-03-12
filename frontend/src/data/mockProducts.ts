@@ -4,7 +4,7 @@ export const trendingProducts = [
     name: "Embroidered Silk Dress",
     price: 35000,
     category: "Women",
-    imageUrl: "", 
+    imageUrl: "/images/products/silk-dress.png", 
     isNew: true,
   },
   {
@@ -12,14 +12,14 @@ export const trendingProducts = [
     name: "Classic Men's Sherwani",
     price: 85000,
     category: "Men",
-    imageUrl: "",
+    imageUrl: "/images/products/men-sherwani.png",
   },
   {
     id: "prod-003",
     name: "Oud Noir Signature",
     price: 18500,
     category: "Perfumes",
-    imageUrl: "",
+    imageUrl: "/images/products/perfume-oud.png",
     isNew: true,
   },
   {
@@ -27,7 +27,7 @@ export const trendingProducts = [
     name: "Leather Tote Bag",
     price: 24000,
     category: "Accessories",
-    imageUrl: "",
+    imageUrl: "/images/products/leather-bag.png",
   },
 ];
 

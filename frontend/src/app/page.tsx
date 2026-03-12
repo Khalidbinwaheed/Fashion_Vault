@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import ProductCard from "@/components/ui/ProductCard";
 import { trendingProducts } from "@/data/mockProducts";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <section className="relative w-full h-[85vh] md:h-[95vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src={process.env.NODE_ENV === 'production' ? '/Fashion_Vault/images/hero-banner.png' : '/images/hero-banner.png'}
+            src={getAssetPath("/images/hero-banner.png")}
             alt="Fashion Vault Luxury Collection"
             fill
             className="object-cover object-center"

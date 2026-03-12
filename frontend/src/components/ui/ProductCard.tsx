@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Heart, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
 import { useCart } from "@/context/CartContext";
+import { getAssetPath } from "@/utils/assetPath";
 
 interface ProductCardProps {
   id: string;
@@ -56,7 +57,7 @@ export default function ProductCard({ id, name, price, category, imageUrl, isNew
         {/* Product Image Placeholder (Using simple div gradient if no real URL provided) */}
         {imageUrl ? (
           <Image
-            src={imageUrl}
+            src={getAssetPath(imageUrl)}
             alt={name}
             fill
             className="object-cover object-center transition-transform duration-700 group-hover:scale-105"

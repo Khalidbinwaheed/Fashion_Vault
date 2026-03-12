@@ -11,10 +11,9 @@ export default function Home() {
     <div className="flex flex-col w-full min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full h-[85vh] md:h-[95vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-banner.png"
+            src={process.env.NODE_ENV === 'production' ? '/Fashion_Vault/images/hero-banner.png' : '/images/hero-banner.png'}
             alt="Fashion Vault Luxury Collection"
             fill
             className="object-cover object-center"
